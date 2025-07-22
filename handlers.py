@@ -65,6 +65,8 @@ async def process_link(message: Message, state: FSMContext):
 
     await message.answer("Ссылка сохранена!")
     await state.clear()
+    
+#-----------------------------------------------------------------------------------------------------------------------
 
 @router.message(Command('my_links'))
 async def cmd_links(message: Message):
@@ -82,10 +84,8 @@ async def cmd_links(message: Message):
         text += f"{i}. {hlink(url, url)}\n"
 
     await message.answer(text)
-
-
-# handlers.py
-
+    
+#-----------------------------------------------------------------------------------------------------------------------
 
 @router.message(Command('delete_links'))
 async def start_delete_link(message: Message, state: FSMContext):
