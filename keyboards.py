@@ -5,7 +5,8 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 kboard = ReplyKeyboardMarkup(
     keyboard=[
         [KeyboardButton(text="/add_links"), KeyboardButton(text="/my_links")],
-        [KeyboardButton(text="/delete_links")]
+        [KeyboardButton(text="/delete_links"), KeyboardButton(text="/categories")],
+        [KeyboardButton(text="/reset")]
     ],
     resize_keyboard=True,
     input_field_placeholder="Выберите команду"
